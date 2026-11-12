@@ -22,6 +22,7 @@ void begin()
     gReset = esp_reset_reason();
     gPrefs.begin(app::NVS_NAMESPACE, false);
     pinMode(cyd::BOOT_BUTTON_PIN, INPUT_PULLUP);
+    pcfBegin();
 }
 
 const char *resetReasonText()

@@ -12,7 +12,7 @@
 namespace app {
 
 inline constexpr char APP_NAME[] = "Lab Template Start";
-inline constexpr char FW_VERSION[] = "v1.0.0";
+inline constexpr char FW_VERSION[] = "v1.1.0";
 inline constexpr char NVS_NAMESPACE[] = "labstart";  // ชื่อที่เก็บค่าถาวร (เปลี่ยนชื่อ = ค่าเดิมหายทั้งหมด)
 
 constexpr uint32_t SERIAL_BAUD = 115200;   // ต้องตรงกับ monitor_speed ใน platformio.ini

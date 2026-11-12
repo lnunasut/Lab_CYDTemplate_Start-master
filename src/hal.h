@@ -72,6 +72,13 @@ void ledGetRgb(uint8_t &r, uint8_t &g, uint8_t &b);
 // ---- เซนเซอร์แสง ----
 int ldrRaw();  // 0-4095 (ยิ่งสว่างยิ่งต่ำ)
 
+// ---- PCF8574 I/O expander (A0-A2 = GND, address 0x20) ----
+void pcfBegin();
+bool pcf8574Present();
+bool pcf8574Read(uint8_t &pins);  // P4-P7 are inputs; high = released, low = pressed
+bool pcf8574WriteOutputs(uint8_t onMask);  // bit 0..3 = LED0..3 on; LEDs sink current (active-low)
+uint8_t pcf8574OutputMask();
+
 // ---- เสียง (hal_sound.cpp) เล่นใน task แยก ไม่ทำให้ UI หน่วง ----
 enum class Melody : uint8_t { Startup, Success, Error, Scale, Song, Count };
 constexpr const char *VOLUME_NAMES[4] = {"OFF", "LOW", "MID", "HIGH"};

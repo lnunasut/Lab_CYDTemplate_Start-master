@@ -3,7 +3,7 @@
 #include "ui.h"
 
 // =====================================================================
-//  ui_main.cpp -- ธีม + tabview 5 แท็บ + ฟังก์ชันช่วยสร้าง widget
+//  ui_main.cpp -- ธีม + tabview 6 แท็บ + ฟังก์ชันช่วยสร้าง widget
 // =====================================================================
 
 namespace {
@@ -53,7 +53,7 @@ void ui_init()
         const char *name;
         void (*build)(lv_obj_t *);
     };
-    const TabDef tabs[] = {{"จอภาพ", ui_display_tab}, {"สัมผัส", ui_touch_tab}, {"ไฟRGB", ui_led_tab}, {"เสียง", ui_sound_tab}, {"ระบบ", ui_system_tab}};
+    const TabDef tabs[] = {{"จอภาพ", ui_display_tab}, {"สัมผัส", ui_touch_tab}, {"ไฟRGB", ui_led_tab}, {"PCF8574", ui_pcf8574_tab}, {"เสียง", ui_sound_tab}, {"ระบบ", ui_system_tab}};
     for (const TabDef &t : tabs) {
         lv_obj_t *page = lv_tabview_add_tab(gTabview, t.name);
         lv_obj_set_style_pad_all(page, 6, 0);

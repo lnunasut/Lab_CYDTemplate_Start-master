@@ -42,6 +42,7 @@ constexpr uint8_t BOOT_BUTTON_PIN = 0;   // ปุ่ม BOOT (กด = LOW) ใ
 // ---- ขา expansion ที่ปลอดภัยสำหรับต่อเซนเซอร์เพิ่ม (ทดสอบแล้ว) ----
 constexpr uint8_t I2C_PIN_SDA = 27;
 constexpr uint8_t I2C_PIN_SCL = 22;
+constexpr uint8_t PCF8574_ADDRESS = 0x20;  // A0, A1, A2 ต่อ GND
 
 // ---- microSD (ยังไม่ใช้ใน Lab นี้) ----
 constexpr uint8_t SD_PIN_CS = 5;
